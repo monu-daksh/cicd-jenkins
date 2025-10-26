@@ -16,7 +16,7 @@ function HomePage() {
       </header>
 
       {/* Features Section */}
-      <section className="my-12 w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
+      <section className="my-12 w-full max-w-6xl text-black grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="bg-white shadow-lg rounded-xl p-6 text-center hover:scale-105 transition-transform">
           <h2 className="text-2xl font-semibold mb-2">Next.js 15</h2>
           <p>Build modern React apps with the latest features and server components.</p>
@@ -33,7 +33,7 @@ function HomePage() {
 
       {/* CI/CD Workflow */}
       <section className="my-12 w-full max-w-4xl">
-        <h2 className="text-3xl font-bold text-center mb-6">CI/CD Workflow with Jenkins</h2>
+        <h2 className="text-3xl font-bold text-center text-gray-500 mb-6">CI/CD Workflow with Jenkins</h2>
         <ol className="list-decimal list-inside space-y-4 text-gray-700 text-lg">
           <li>Commit code to GitHub repository.</li>
           <li>Jenkins automatically pulls the latest changes.</li>
@@ -45,7 +45,7 @@ function HomePage() {
 
       {/* Contact */}
       <section className="my-12 w-full max-w-2xl text-center">
-        <h2 className="text-3xl font-bold mb-4">Get in Touch</h2>
+        <h2 className="text-3xl font-bold mb-4 text-gray-600">Get in Touch</h2>
         <p className="mb-4 text-gray-700">
           Want to set up CI/CD with Jenkins for your Next.js projects? Reach out!
         </p>
