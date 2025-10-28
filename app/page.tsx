@@ -14,7 +14,7 @@ function HomePage() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-start bg-gray-50 text-gray-900">
       
-      {/* ✅ HEADER */}
+  
       <header className="w-full bg-white shadow-md fixed top-0 left-0 z-10">
         <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
           {/* Logo / Title */}
@@ -31,10 +31,10 @@ function HomePage() {
         </div>
       </header>
 
-      {/* Spacer for fixed header */}
+    
       <div className="h-24" />
 
-      {/* ✅ SEARCH BAR */}
+  
       <section className="w-full max-w-lg mt-8 px-4">
         <form
           onSubmit={handleSearch}
@@ -56,7 +56,7 @@ function HomePage() {
         </form>
       </section>
 
-      {/* ✅ INTRO SECTION */}
+     
       <section className="text-center my-12 px-4">
         <h2 className="text-5xl font-bold text-pink-500 mb-2">
           Next.js 15 + CI/CD + Jenkins
@@ -66,7 +66,7 @@ function HomePage() {
         </p>
       </section>
 
-      {/* ✅ FEATURES SECTION */}
+    
       <section id="features" className="my-12 w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
         {[
           {
@@ -94,7 +94,7 @@ function HomePage() {
         ))}
       </section>
 
-      {/* ✅ CI/CD WORKFLOW */}
+   
       <section id="workflow" className="my-12 w-full max-w-4xl px-4">
         <h2 className="text-3xl font-bold text-center text-gray-600 mb-6">
           CI/CD Workflow with Jenkins
@@ -108,7 +108,7 @@ function HomePage() {
         </ol>
       </section>
 
-      {/* ✅ CONTACT SECTION */}
+    
       <section id="contact" className="my-12 w-full max-w-2xl text-center">
         <h2 className="text-3xl font-bold mb-4 text-gray-600">Get in Touch</h2>
         <p className="mb-4 text-gray-700">
@@ -122,7 +122,7 @@ function HomePage() {
         </a>
       </section>
 
-      {/* ✅ FOOTER */}
+  
       <footer className="text-gray-500 mt-12 mb-6 text-sm">
         &copy; {new Date().getFullYear()} Your Name. Built with ❤️ using Next.js 15 + TailwindCSS.
       </footer>
