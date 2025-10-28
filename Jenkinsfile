@@ -2,37 +2,45 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Checkout Code') {
             steps {
-                git branch: 'main', url: 'https://github.com/monu-daksh/cicd-jenkins.git'
+                echo "🔄 Pulling latest code from main branch..."
+                git branch: 'main', url: 'https://github.com/<your-username>/<your-repo-name>.git'
             }
         }
 
         stage('Install Dependencies') {
             steps {
+                echo "📦 Installing dependencies..."
                 sh 'npm install'
             }
         }
 
-        stage('Build') {
+        stage('Build Application') {
             steps {
+                echo "🛠 Building Next.js app..."
                 sh 'npm run build'
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy Application') {
             steps {
+                echo "🚀 Deploying app with PM2..."
                 sh '''
-                # Stop existing process if any
-                pm2 stop next-app || true
-                
-                # Start Next.js on port 5000
-                PORT=5000 pm2 start npm --name "next-app" -- run start
-
-                # Save PM2 state so it restarts after reboot
-                pm2 save
+                    pm2 delete nextjs-cicd || true
+                    pm2 start npm --name "nextjs-cicd" -- start -- --port 5000
+                    pm2 save
                 '''
             }
+        }
+    }
+
+    post {
+        success {
+            echo "✅ Deployment successful! App running on port 5000"
+        }
+        failure {
+            echo "❌ Deployment failed. Check Jenkins console logs for details."
         }
     }
 }
