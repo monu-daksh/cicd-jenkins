@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout Code') {
             steps {
                 echo "🔄 Pulling latest code from main branch..."
-                git branch: 'main', url: 'https://github.com/<your-username>/<your-repo-name>.git'
+                git branch: 'main', url: 'https://github.com/monu-daksh/cicd-jenkins.git'
             }
         }
 
