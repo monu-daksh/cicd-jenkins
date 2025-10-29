@@ -6,6 +6,8 @@ import { Search } from "lucide-react"; // for a clean search icon
 function HomePage() {
   const [search, setSearch] = useState("");
 
+
+  // handle Search buttons
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     alert(`You searched for: ${search}`);
