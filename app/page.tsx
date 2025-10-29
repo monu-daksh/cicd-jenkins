@@ -61,7 +61,7 @@ function HomePage() {
      
       <section className="text-center my-12 px-4">
         <h2 className="text-5xl font-bold text-pink-500 mb-2">
-          Next.js 15 + CI/CD + Jenkins
+          Next.js 15 + CI/CD + Jenkins + SonarQube
         </h2>
         <p className="text-lg text-gray-700 max-w-2xl mx-auto">
           Automate your deployments with Next.js 15, TypeScript, TailwindCSS, and Jenkins.
