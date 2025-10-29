@@ -19,7 +19,7 @@ function HomePage() {
         <div className="max-w-7xl mx-auto flex items-center justify-between p-4">
           {/* Logo / Title */}
           <h1 className="text-2xl md:text-3xl font-bold text-pink-500">
-            🚀 CI/CD Next.js
+           
           </h1>
 
           {/* Navigation */}
